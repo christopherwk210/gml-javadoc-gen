@@ -37,5 +37,8 @@ comment.addEventListener('input', function() {
 
     // Display output
     output.value = javaDocStr;
+  } else {
+    // Reset
+    output.value = '';
   }
 });
