@@ -4,7 +4,7 @@ var output = document.getElementById('output');
 
 // Default JavaDoc strings
 var desc = '/// @description ';
-var param = '/// @param {type} ';
+var param = '/// @param ';
 
 // Listen for changes
 comment.addEventListener('input', function() {
@@ -15,7 +15,7 @@ comment.addEventListener('input', function() {
   var noSlashes = comment.value.replace(/(^[/]+)/g, '').trim();
 
   // Regex for GML function
-  var pattern = /(^[A-Za-z_])([A-Za-z_0-9])*(\s?)(\()(\s?)(([A-Za-z_])([A-Za-z_0-9])*(\s?)([,])(\s?))+(([A-Za-z_])([A-Za-z_0-9])*(\s?)(\)))/g;
+  var pattern = /(^[A-Za-z_])([A-Za-z_0-9])*(\s?)(\()(\s?)(([A-Za-z_])([A-Za-z_0-9])*)+(((\s?)([,]?)(\s?)([A-Za-z_])([A-Za-z_0-9])*)*(\)))/g;
 
   // Test the regex
   if (pattern.test(noSlashes)) {
