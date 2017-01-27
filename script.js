@@ -15,7 +15,7 @@ comment.addEventListener('input', function() {
   var noSlashes = comment.value.replace(/(^[/]+)/g, '').trim();
 
   // Regex for GML function
-  var pattern = /(^[A-Za-z_])([A-Za-z_0-9])*(\s?)(\()(\s?)(([A-Za-z_])([A-Za-z_0-9])*)+(((\s?)([,]?)(\s?)([A-Za-z_])([A-Za-z_0-9])*)*(\)))/g;
+  var pattern = /(^[A-Za-z_])([A-Za-z_0-9])*(\s?)(\()(\s*)(([A-Za-z_])([A-Za-z_0-9])*)+(((\s*)([,]?)(\s*)([A-Za-z_])([A-Za-z_0-9])*)*(\s*)(\)))/g;
 
   // Test the regex
   if (pattern.test(noSlashes)) {
