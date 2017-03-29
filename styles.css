@@ -28,6 +28,16 @@ input, textarea {
   border: none;
 }
 
+.checkbox {
+  display: inline;
+  width: initial;
+}
+
+label {
+  cursor: pointer;
+  font-weight: lighter;
+}
+
 .title {
   font-weight: lighter;
   border-bottom: solid 2px black;

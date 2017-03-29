@@ -1,13 +1,21 @@
 // Get element references
 var comment = document.getElementById('comment');
 var output = document.getElementById('output');
+var check = document.getElementById('arg');
 
 // Default JavaDoc strings
 var desc = '/// @description ';
 var param = '/// @param ';
 
-// Listen for changes
-comment.addEventListener('input', function() {
+// Change between arg and param based on checkbox state
+var changeParam = function() {
+  param = check.checked ? '/// @arg ' : '/// @param ';
+}
+
+var handleUpdate = function() {
+  // Check the arg box
+  changeParam();
+
   // Output string
   var javaDocStr = '';
 
@@ -41,4 +49,8 @@ comment.addEventListener('input', function() {
     // Reset
     output.value = '';
   }
-});
+}
+
+// Listen for changes
+check.addEventListener('change', handleUpdate);
+comment.addEventListener('input', handleUpdate);
