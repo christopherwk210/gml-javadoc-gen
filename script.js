@@ -2,6 +2,7 @@
 var comment = document.getElementById('comment');
 var output = document.getElementById('output');
 var check = document.getElementById('arg');
+var select = document.getElementById('select-text');
 
 // Default JavaDoc strings
 var desc = '/// @description ';
@@ -51,6 +52,12 @@ var handleUpdate = function() {
   }
 }
 
+var handleSelectText = function() {
+  // Select output box
+  output.select();
+}
+
 // Listen for changes
 check.addEventListener('change', handleUpdate);
 comment.addEventListener('input', handleUpdate);
+select.addEventListener('click', handleSelectText);
