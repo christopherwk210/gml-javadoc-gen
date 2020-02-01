@@ -1,3 +1,5 @@
+⚠️ [This project has moved!](https://github.com/christopherwk210/tophers-tools/tree/master/src/app/components/tools/game-maker/gml-javadoc-gen)
+
 # GML JavaDoc Gen
 Quickly turn GameMaker: Studio script comments into GameMaker Studio 2 compatible JavaDoc comments.
 
